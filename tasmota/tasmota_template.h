@@ -397,8 +397,6 @@ enum SupportedModules {
   WAGA,
   SYF05,
   SONOFF_L1,
-  SONOFF_IFAN03,
-  EXS_DIMMER,
   MAXMODULE};
 
 #define USER_MODULE        255
@@ -2122,46 +2120,6 @@ const mytmplt kModules[MAXMODULE] PROGMEM = {
      0,
      GPIO_LED1_INV,    // GPIO13 WiFi Blue Led - Link and Power status
      0, 0, 0, 0
-  },
-  { "Sonoff iFan03",   // SONOFF_IFAN03 - Sonoff iFan03 (ESP8285)
-     GPIO_KEY1,        // GPIO00 WIFI_KEY0 Button 1
-     GPIO_TXD,         // GPIO01 ESP_TXD Serial RXD connection to P0.5 of RF microcontroller
-     0,                // GPIO02 ESP_LOG
-     GPIO_RXD,         // GPIO03 ESP_RXD Serial TXD connection to P0.4 of RF microcontroller
-     0,                // GPIO04 DEBUG_RX
-     0,                // GPIO05 DEBUG_TX
-                       // GPIO06 (SD_CLK   Flash)
-                       // GPIO07 (SD_DATA0 Flash QIO/DIO/DOUT)
-                       // GPIO08 (SD_DATA1 Flash QIO/DIO/DOUT)
-     GPIO_REL1_INV,    // GPIO09 WIFI_O0 Relay 1 (0 = Off, 1 = On) controlling the light
-     GPIO_BUZZER_INV,  // GPIO10 WIFI_O4 Buzzer (0 = Off, 1 = On)
-                       // GPIO11 (SD_CMD   Flash)
-     GPIO_REL3,        // GPIO12 WIFI_O2 Relay 3 (0 = Off, 1 = On) controlling the fan
-     GPIO_LED1_INV,    // GPIO13 WIFI_CHK Blue Led on PCA (0 = On, 1 = Off) - Link and Power status
-     GPIO_REL2,        // GPIO14 WIFI_O1 Relay 2 (0 = Off, 1 = On) controlling the fan
-     GPIO_REL4,        // GPIO15 WIFI_O3 Relay 4 (0 = Off, 1 = On) controlling the fan
-     0, 0
-  },
-  { "EXS Dimmer",      // EXS_DIMMER - EX-Store WiFi Dimmer v4, two channel (ESP8266 w/ separate MCU dimmer)
-                       // https://ex-store.de/2-Kanal-RS232-WiFi-WLan-Dimmer-Modul-V4-fuer-Unterputzmontage-230V-3A
-                       // https://ex-store.de/2-Kanal-RS232-WiFi-WLan-Dimmer-Modul-V4-fuer-Unterputzmontage-230V-3A-ESP8266-V12-Stift-und-Buchsenleisten
-     0,
-     GPIO_TXD,         // GPIO01 MCU serial control
-     GPIO_LEDLNK,      // GPIO02 LED Link
-     GPIO_RXD,         // GPIO03 MCU serial control
-     GPIO_USER,        // GPIO04
-     GPIO_USER,        // GPIO05
-                       // GPIO06 (SD_CLK   Flash)
-                       // GPIO07 (SD_DATA0 Flash QIO/DIO/DOUT)
-                       // GPIO08 (SD_DATA1 Flash QIO/DIO/DOUT)
-     0,                // GPIO09 (SD_DATA2 Flash QIO or ESP8285)
-     0,                // GPIO10 (SD_DATA3 Flash QIO or ESP8285)
-                       // GPIO11 (SD_CMD   Flash)
-     GPIO_USER,        // GPIO12
-     GPIO_EXS_ENABLE,  // GPIO13 EXS MCU Enable
-     GPIO_USER,        // GPIO14
-     0,                // GPIO15
-     0, 0
   }
 };
 

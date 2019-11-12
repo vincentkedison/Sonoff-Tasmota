@@ -346,7 +346,7 @@ const char HTTP_HEAD_STYLE1[] PROGMEM =
   "body{text-align:center;font-family:verdana,sans-serif;background:#%06x;}"  // COLOR_BACKGROUND
   "td{padding:0px;}";
 const char HTTP_HEAD_STYLE2[] PROGMEM =
-  "button{border:0;border-radius:0.3rem;background:#%06x;color:#%06x;line-height:2.4rem;font-size:1.2rem;width:100%%;-webkit-transition-duration:0.4s;transition-duration:0.4s;cursor:pointer;}"  // COLOR_BUTTON, COLOR_BUTTON_TEXT
+  "button{border:0;border-radius:2rem;background:#%06x;color:#%06x;line-height:2.4rem;font-size:1.2rem;width:100%%;-webkit-transition-duration:0.4s;transition-duration:0.4s;cursor:pointer;outline:0}"  // COLOR_BUTTON, COLOR_BUTTON_TEXT
   "button:hover{background:#%06x;}"  // COLOR_BUTTON_HOVER
   ".bred{background:#%06x;}"  // COLOR_BUTTON_RESET
   ".bred:hover{background:#%06x;}"  // COLOR_BUTTON_RESET_HOVER
@@ -474,7 +474,7 @@ const char HTTP_COUNTER[] PROGMEM =
   "<br><div id='t' style='text-align:center;'></div>";
 
 const char HTTP_END[] PROGMEM =
-  "<div style='text-align:right;font-size:11px;'><hr/><a href='https://bit.ly/tasmota' target='_blank' style='color:#aaa;'>Tasmota %s " D_BY " Theo Arends</a></div>"
+  "<div style='text-align:right;font-size:11px;'><hr/><a href='https://www.luxodev.com' target='_blank' style='color:#aaa;'>Lasmota %s " D_BY " Luxodev</a></div>"
   "</div>"
   "</body>"
   "</html>";
